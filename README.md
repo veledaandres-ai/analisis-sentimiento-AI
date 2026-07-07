@@ -35,6 +35,10 @@ A diferencia de las versiones iniciales de desarrollo (MVP), esta solución desp
 5. **Mapeo de Alertas Visuales:** Inyección de reglas de negocio cromáticas basadas en criticidad (Semáforos de Impacto) mediante el nodo `Color Manager`.
 6. **Pipeline de Producción Unificado (Continuous Deployment):** Consolidación de datos orientada a un único arreglo JSON (`Table to JSON`) y persistencia automatizada (`JSON Writer`) dentro del mismo repositorio del proyecto. Al realizar un único `git push`, GitHub centraliza los artefactos del backend (workflow de KNIME) y del frontend (`index.html`), provocando que Vercel actualice el Dashboard en producción de forma inmediata al leer el JSON de manera local.
 
+** Acceso a la fuente de datos en vivo:** Podés auditar la estructura de ingesta y las alertas capturadas de Yahoo Finance directamente en este Enlace al Google Sheets de Monitoreo.
+
+https://docs.google.com/spreadsheets/d/1O5MLwNmcJ-I7LjdA-XVGH-y_xB7dCinfSN46SjoI5uE/edit?usp=sharing
+
 ---
 
 ## 💻 Requisitos e Instalación

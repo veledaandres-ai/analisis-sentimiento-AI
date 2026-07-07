@@ -39,6 +39,11 @@ A diferencia de las versiones iniciales de desarrollo (MVP), esta solución desp
 
 https://docs.google.com/spreadsheets/d/1O5MLwNmcJ-I7LjdA-XVGH-y_xB7dCinfSN46SjoI5uE/edit?usp=sharing
 
+**Links a los repositorios de GitHub**
+
+https://github.com/veledaandres-ai/analisis-sentimiento-AI
+https://github.com/veledaandres-ai/analisis-sentimiento-dashboard
+
 ---
 
 ## 💻 Requisitos e Instalación
@@ -59,6 +64,9 @@ El entregable final cuenta con un frontend moderno desplegado en **Vercel** que 
 * **KPIs en tiempo real:** Contadores automáticos de volumen y polaridad del mercado sin desajustes de idioma.
 * **Filtros cruzados interactivos:** Al presionar sobre el gráfico de distribución de sentimientos (Barras) o de proporción de impacto (Dona), la tabla de monitoreo inferior se filtra instantáneamente en caliente.
 * **Semáforos de riesgo:** Bordes de fila codificados por colores (Rojo para Impacto Alto, Amarillo para Medio, Verde para Bajo) imitando el diseño analítico del *Table View* corporativo de KNIME.
+
+**Link al dashboard deployado en Vercel**
+https://analisis-sentimiento-dashboard.vercel.app/
 
 ---
 *Este desarrollo representa la consolidación final de la solución en un repositorio único integrado, demostrando el potencial de acoplar plataformas ETL visuales con capacidades modernas de Inteligencia Artificial y despliegue continuo (CI/CD) para el análisis de mercados financieros.*

@@ -30,7 +30,7 @@ A diferencia de las versiones iniciales de desarrollo (MVP), esta solución desp
 
 1. **Conexión API e Ingesta:** Lectura automatizada de la base de noticias desde Google Sheets conectada a Yahoo Finance.
 2. **Orquestación del Prompt y Request:** Construcción de prompts estructurados y parametrizados para forzar respuestas estrictamente en formato de datos intercambiables (JSON).
-3. **Consumo de Servicios de Inferencia:** Envío y recepción de peticiones HTTP POST hacia proveedores de modelos de lenguaje avanzados.
+3. **Consumo del Motor de IA vía OpenRouter:** Envío y recepción de peticiones HTTP POST centralizadas a través del agregador de inferencia **OpenRouter**, utilizando el modelo **DEEPSEEK** como motor de Inteligencia Artificial principal para garantizar baja latencia y alta precisión contextual.
 4. **Sanitización de Markdown y Extracción Estructurada:** Procesamiento inteligente del texto mediante manipulación de cadenas de caracteres para limpiar los bloques de código y parseo nativo con nodos `JSON Path`, aislando las variables de negocio en columnas independientes sin necesidad de desestructuraciones manuales.
 5. **Mapeo de Alertas Visuales:** Inyección de reglas de negocio cromáticas basadas en criticidad (Semáforos de Impacto) mediante el nodo `Color Manager`.
 6. **Pipeline de Producción Unificado (Continuous Deployment):** Consolidación de datos orientada a un único arreglo JSON (`Table to JSON`) y persistencia automatizada (`JSON Writer`) dentro del mismo repositorio del proyecto. Al realizar un único `git push`, GitHub centraliza los artefactos del backend (workflow de KNIME) y del frontend (`index.html`), provocando que Vercel actualice el Dashboard en producción de forma inmediata al leer el JSON de manera local.
@@ -44,7 +44,7 @@ Para replicar, auditar o ejecutar el workflow de datos localmente:
 1. **Descarga el Workflow:** Descarga el archivo de flujo de trabajo disponible en este repositorio.
 2. **Prepara KNIME:** Abre **KNIME Analytics Platform** (Versión 5.x o superior).
 3. **Importa el Proyecto:** Ve a `File` -> `Import KNIME Workflow...` y selecciona el archivo descargado.
-4. **Configura tus Credenciales:** Abre el nodo de conexión HTTP/API e ingresa tu API Key correspondiente para habilitar las llamadas de inferencia del LLM.
+4. **Configura tus Credenciales:** Abre el nodo de conexión HTTP/API e ingresa tu API Key de **OpenRouter** correspondiente para habilitar las llamadas de inferencia del modelo configurado.
 5. **Ejecuta el Pipeline:** Haz clic en **Execute All** para procesar la ingesta actual de Google Sheets, correr la inferencia y exportar el archivo actualizado `noticias.json`.
 
 ---
